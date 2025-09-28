@@ -31,5 +31,12 @@ public class healthManager : MonoBehaviour
         currentGems += amount;
         
     }
+    void Update()
+    {
+        if (currentHealth == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 
 }
