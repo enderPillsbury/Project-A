@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class healthManager : MonoBehaviour
 {
-    public int maxHealth = 5;
+    public int maxHealth = 10;
 
     public int currentMoney = 0;
 
@@ -17,16 +17,18 @@ public class healthManager : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        UIHandler.instance.SetHealthValue(currentHealth);
     }
 
     public void ChangeMoney(int amount)
     {
-
+        currentMoney += amount;
+        UIHandler.instance.SetMoneyValue(currentMoney);
     }
 
     public void ChangeGems(int amount)
     {
+        currentGems += amount;
         
     }
 
