@@ -2,7 +2,7 @@ using System.Xml.Serialization;
 using UnityEngine;
 
 public class healthManager : MonoBehaviour
-{
+{   
     public int maxHealth = 10;
 
     public int currentMoney = 0;
@@ -14,7 +14,7 @@ public class healthManager : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void ChangeHealth(int amount)
+    public void ChangeHealth(int amount)        //Health and Money Display codes altered from Unity's 2D Game Tutorial
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHandler.instance.SetHealthValue(currentHealth);

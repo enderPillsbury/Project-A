@@ -7,9 +7,9 @@ public class itemAttributes : MonoBehaviour
     public int healthAmount;
     public int moneyAmount;
     public int gemAmount;
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) 
     {
-        healthManager controller = other.GetComponent<healthManager>();
+        healthManager controller = other.GetComponent<healthManager>(); //Ensures that only the player can trigger the effects
 
         if (controller != null)
         {
