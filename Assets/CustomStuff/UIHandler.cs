@@ -19,11 +19,12 @@ public class UIHandler : MonoBehaviour
 
         player_Health = uIDocument.rootVisualElement.Q<ProgressBar>("HP");
         player_Money = uIDocument.rootVisualElement.Q<IntegerField>("Money");
+        SetHealthValue(10);
         SetMoneyValue(0);
 
     }
 
-    public void SetHealthValue(float current)
+    public void SetHealthValue(int current)
     {
         player_Health.value = current;
     }
