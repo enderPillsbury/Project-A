@@ -7,6 +7,7 @@ public class Respawn : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
+        Debug.Log("Entered");
         if (collider.gameObject == triggerObject)
         {
             triggerObject.transform.position = new Vector3(-3, 1, 41);
